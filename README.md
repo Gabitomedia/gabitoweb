@@ -1,36 +1,295 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+GDT — Video Editor · Filmmaker · Creator
 
-## Getting Started
+Portfolio audiovisual profesional desarrollado con Next.js, React, TypeScript y Tailwind CSS.
 
-First, run the development server:
+🌐 Live: https://gabitomedia.vercel.app/
 
-```bash
+📦 Repository: https://github.com/Gabitomedia/gabitoweb
+
+📸 Preview
+
+Desktop
+
+![GDT Portfolio — Full Website](./public/images/portfolio-full.webp)
+
+
+
+Mobile
+
+![GDT Portfolio — Mobile](./public/images/portfolio-mobile.webp)
+
+
+
+
+🎬 About the project
+
+GDT is a personal portfolio website created to showcase professional work in:
+
+Video editing
+Filmmaking
+Content creation
+Commercial video
+Music videos
+AI-generated video projects
+
+The website was designed and developed from scratch with a focus on a modern, cinematic and minimal visual identity inspired by contemporary interfaces such as Apple, Linear and Vercel.
+
+The project combines audiovisual content with a responsive web interface, smooth animations and optimized external video delivery.
+
+✨ Features
+
+Responsive design for desktop, tablet and mobile
+Cinematic hero section with showreel
+Interactive project showcase
+Video playback directly inside project cards
+Smooth UI animations and transitions
+Services section
+About section
+Contact section
+Social media links
+Responsive navigation
+Optimized image assets
+External video hosting through Cloudinary
+Automatic production deployments through Vercel
+Git-based development workflow
+
+🛠️ Tech Stack
+
+Frontend
+Next.js 16
+React
+TypeScript
+Tailwind CSS
+UI & Animation
+Framer Motion
+Lucide React
+Media
+Cloudinary — video hosting and delivery
+Development & Deployment
+Git
+GitHub
+Vercel
+
+🏗️ Architecture
+
+The project follows a component-based architecture using the Next.js App Router.
+
+gabitoweb/
+│
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── globals.css
+│
+├── components/
+│   ├── Navbar.tsx
+│   ├── Hero.tsx
+│   ├── Projects.tsx
+│   ├── Services.tsx
+│   ├── About.tsx
+│   ├── Contact.tsx
+│   └── Footer.tsx
+│
+├── public/
+│   ├── images/
+│   │   └── *.webp
+│   └── videos/
+│
+├── package.json
+├── next.config.ts
+├── tsconfig.json
+├── postcss.config.mjs
+└── .gitignore
+Component structure
+App
+│
+├── Navbar
+│
+├── Hero
+│   └── Showreel
+│
+├── Projects
+│   └── Project cards
+│       └── Cloudinary video
+│
+├── Services
+│
+├── About
+│
+├── Contact
+│
+└── Footer
+
+The interface is divided into reusable React components rather than placing the entire page inside a single component.
+
+🎥 Video Architecture
+
+Large video files are not stored inside the Git repository.
+
+Instead, portfolio videos are hosted through Cloudinary and loaded using their delivery URLs.
+
+User
+ │
+ ▼
+Vercel
+ │
+ ▼
+Next.js application
+ │
+ ├── Images → /public/images
+ │
+ └── Videos → Cloudinary
+                    │
+                    ▼
+                 CDN delivery
+
+This approach keeps the Git repository lightweight while allowing the portfolio to serve large audiovisual files efficiently.
+
+The local public/videos directory is excluded from Git using .gitignore.
+
+/public/videos/*.mp4
+🎨 Design
+
+The visual direction combines:
+
+Dark interface
+High-contrast typography
+Violet accent colors
+Large cinematic media
+Minimal UI
+Rounded cards
+Glass / translucent surfaces
+Smooth motion
+Responsive layouts
+
+The goal was to keep the interface visually focused on the audiovisual work rather than competing with it.
+
+📱 Responsive Design
+
+The website was designed to adapt to different screen sizes.
+
+Desktop
+┌──────────────────────────────────────┐
+│              Navbar                  │
+│                                      │
+│             Hero / Showreel          │
+│                                      │
+│             Projects                 │
+│                                      │
+│       Services / About / Contact     │
+└──────────────────────────────────────┘
+
+
+Mobile
+┌──────────────────┐
+│      Navbar      │
+│                  │
+│     Showreel     │
+│                  │
+│     Projects     │
+│                  │
+│     Services     │
+│                  │
+│      About       │
+│                  │
+│     Contact      │
+└──────────────────┘
+🚀 Getting Started
+Requirements
+Node.js
+npm
+Git
+Clone the repository
+git clone https://github.com/Gabitomedia/gabitoweb.git
+cd gabitoweb
+Install dependencies
+npm install
+Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
+🏭 Production Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To create a production build:
 
-## Learn More
+npm run build
 
-To learn more about Next.js, take a look at the following resources:
+To run the production version locally:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+npm run start
+☁️ Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The project is deployed using Vercel.
 
-## Deploy on Vercel
+GitHub
+   │
+   │ git push
+   ▼
+Vercel
+   │
+   │ automatic build
+   ▼
+Production deployment
+   │
+   ▼
+https://gabitomedia.vercel.app/
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Every push to the main branch can trigger a new production deployment.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🔄 Development Workflow
+
+The project uses Git for version control.
+
+Typical workflow:
+
+git add .
+git commit -m "Update portfolio"
+git push
+
+After pushing changes to GitHub, Vercel handles the deployment automatically.
+
+📂 Media Strategy
+
+Large audiovisual files are intentionally kept outside GitHub.
+
+Stored in the repository
+Source code
+Components
+Styles
+Configuration
+Optimized image thumbnails
+SVG assets
+Hosted externally
+Showreel
+Music videos
+Commercial projects
+AI video projects
+Gaming projects
+
+This keeps the repository small and makes deployment through GitHub and Vercel practical.
+
+🔗 Links
+
+Portfolio
+
+https://gabitomedia.vercel.app/
+
+GitHub
+
+https://github.com/Gabitomedia/gabitoweb
+
+👤 Author
+
+Gabito / GDT
+
+Video Editor · Filmmaker · Creator
+
+Portfolio: https://gabitomedia.vercel.app/
+
+📄 License
+
+This repository contains personal portfolio work and is intended primarily for demonstration and professional presentation.
+
+Please do not reuse the audiovisual content or personal branding without permission.
