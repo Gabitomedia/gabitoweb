@@ -21,274 +21,252 @@ Mobile
 
 
 
-🎬 About the project
+---
+
+## 🎬 About the project
 
 GDT is a personal portfolio website created to showcase professional work in:
 
-Video editing
-Filmmaking
-Content creation
-Commercial video
-Music videos
-AI-generated video projects
+- Video editing
+- Filmmaking
+- Content creation
+- Commercial video
+- Music videos
+- AI-generated video projects
 
-The website was designed and developed from scratch with a focus on a modern, cinematic and minimal visual identity inspired by contemporary interfaces such as Apple, Linear and Vercel.
+The website was designed and developed from scratch with a modern, cinematic and minimal visual identity.
 
 The project combines audiovisual content with a responsive web interface, smooth animations and optimized external video delivery.
 
-✨ Features
+---
 
-Responsive design for desktop, tablet and mobile
-Cinematic hero section with showreel
-Interactive project showcase
-Video playback directly inside project cards
-Smooth UI animations and transitions
-Services section
-About section
-Contact section
-Social media links
-Responsive navigation
-Optimized image assets
-External video hosting through Cloudinary
-Automatic production deployments through Vercel
-Git-based development workflow
+## ✨ Features
 
-🛠️ Tech Stack
+- Responsive design for desktop, tablet and mobile
+- Cinematic hero section with showreel
+- Interactive project showcase
+- Video playback inside project cards
+- Smooth UI animations and transitions
+- Services section
+- About section
+- Contact section
+- Social media links
+- Responsive navigation
+- Optimized image assets
+- External video hosting through Cloudinary
+- Automatic production deployments through Vercel
+- Git-based development workflow
 
-Frontend
-Next.js 16
-React
-TypeScript
-Tailwind CSS
-UI & Animation
-Framer Motion
-Lucide React
-Media
-Cloudinary — video hosting and delivery
-Development & Deployment
-Git
-GitHub
-Vercel
+---
 
-🏗️ Architecture
+## 🛠️ Tech Stack
+
+### Frontend
+
+- **Next.js 16**
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+
+### UI & Animation
+
+- **Framer Motion**
+- **Lucide React**
+
+### Media
+
+- **Cloudinary** — video hosting and delivery
+
+### Development & Deployment
+
+- **Git**
+- **GitHub**
+- **Vercel**
+
+---
+
+## 🏗️ Architecture
 
 The project follows a component-based architecture using the Next.js App Router.
 
-gabitoweb/
-│
-├── app/
-│   ├── layout.tsx
-│   ├── page.tsx
-│   └── globals.css
-│
-├── components/
-│   ├── Navbar.tsx
-│   ├── Hero.tsx
-│   ├── Projects.tsx
-│   ├── Services.tsx
-│   ├── About.tsx
-│   ├── Contact.tsx
-│   └── Footer.tsx
-│
-├── public/
-│   ├── images/
-│   │   └── *.webp
-│   └── videos/
-│
-├── package.json
-├── next.config.ts
-├── tsconfig.json
-├── postcss.config.mjs
-└── .gitignore
-Component structure
-App
-│
-├── Navbar
-│
-├── Hero
-│   └── Showreel
-│
-├── Projects
-│   └── Project cards
-│       └── Cloudinary video
-│
-├── Services
-│
-├── About
-│
-├── Contact
-│
-└── Footer
+### Application structure
 
-The interface is divided into reusable React components rather than placing the entire page inside a single component.
+- `app/` — Next.js App Router
+- `app/layout.tsx` — Root layout and metadata
+- `app/page.tsx` — Main portfolio page
+- `app/globals.css` — Global styles
+- `components/` — Reusable React components
+- `public/images/` — Optimized image assets
+- `public/videos/` — Local video directory excluded from Git
+- `package.json` — Dependencies and project scripts
+- `next.config.ts` — Next.js configuration
+- `tsconfig.json` — TypeScript configuration
+- `.gitignore` — Git exclusions
 
-🎥 Video Architecture
+### Components
 
-Large video files are not stored inside the Git repository.
+- `Navbar.tsx` — Navigation and responsive menu
+- `Hero.tsx` — Hero section and showreel
+- `Projects.tsx` — Portfolio projects and video players
+- `Services.tsx` — Services section
+- `About.tsx` — Personal and professional information
+- `Contact.tsx` — Contact information and social links
+- `Footer.tsx` — Footer and social links
 
-Instead, portfolio videos are hosted through Cloudinary and loaded using their delivery URLs.
+The component-based structure keeps the application organized, maintainable and easy to extend.
 
-User
- │
- ▼
-Vercel
- │
- ▼
-Next.js application
- │
- ├── Images → /public/images
- │
- └── Videos → Cloudinary
-                    │
-                    ▼
-                 CDN delivery
+---
 
-This approach keeps the Git repository lightweight while allowing the portfolio to serve large audiovisual files efficiently.
+## 🎥 Video Architecture
 
-The local public/videos directory is excluded from Git using .gitignore.
+Large video files are not stored in the Git repository.
 
-/public/videos/*.mp4
-🎨 Design
+Portfolio videos are hosted through Cloudinary and loaded using their delivery URLs.
+
+The media architecture is:
+
+**User → Vercel → Next.js → Cloudinary CDN → Video**
+
+This approach keeps the Git repository lightweight while allowing the portfolio to serve large audiovisual files externally.
+
+The local `public/videos/` directory is excluded from Git using `.gitignore`.
+
+---
+
+## 🎨 Design
 
 The visual direction combines:
 
-Dark interface
-High-contrast typography
-Violet accent colors
-Large cinematic media
-Minimal UI
-Rounded cards
-Glass / translucent surfaces
-Smooth motion
-Responsive layouts
+- Dark interface
+- High-contrast typography
+- Violet accents
+- Large cinematic media
+- Minimal UI
+- Rounded cards
+- Glass / translucent surfaces
+- Smooth motion
+- Responsive layouts
 
 The goal was to keep the interface visually focused on the audiovisual work rather than competing with it.
 
-📱 Responsive Design
+---
+
+## 📱 Responsive Design
 
 The website was designed to adapt to different screen sizes.
 
-Desktop
-┌──────────────────────────────────────┐
-│              Navbar                  │
-│                                      │
-│             Hero / Showreel          │
-│                                      │
-│             Projects                 │
-│                                      │
-│       Services / About / Contact     │
-└──────────────────────────────────────┘
+The interface has dedicated responsive behavior for desktop, tablet and mobile layouts.
 
+Navigation, typography, project cards, video players and spacing adapt according to the available screen size.
 
-Mobile
-┌──────────────────┐
-│      Navbar      │
-│                  │
-│     Showreel     │
-│                  │
-│     Projects     │
-│                  │
-│     Services     │
-│                  │
-│      About       │
-│                  │
-│     Contact      │
-└──────────────────┘
-🚀 Getting Started
-Requirements
-Node.js
-npm
-Git
-Clone the repository
-git clone https://github.com/Gabitomedia/gabitoweb.git
-cd gabitoweb
-Install dependencies
-npm install
-Run development server
-npm run dev
+---
 
-Open:
+## 🚀 Getting Started
 
-http://localhost:3000
-🏭 Production Build
+### Requirements
 
-To create a production build:
+You need:
 
-npm run build
+- Node.js
+- npm
+- Git
 
-To run the production version locally:
+### Clone the repository
 
-npm run start
-☁️ Deployment
+Run `git clone https://github.com/Gabitomedia/gabitoweb.git`
+
+Then enter the project directory with `cd gabitoweb`.
+
+### Install dependencies
+
+Run `npm install`.
+
+### Development server
+
+Run `npm run dev`.
+
+The development server will be available at `http://localhost:3000`.
+
+---
+
+## 🏭 Production Build
+
+To create a production build, run `npm run build`.
+
+To run the production version locally, use `npm run start`.
+
+---
+
+## ☁️ Deployment
 
 The project is deployed using Vercel.
 
-GitHub
-   │
-   │ git push
-   ▼
-Vercel
-   │
-   │ automatic build
-   ▼
-Production deployment
-   │
-   ▼
-https://gabitomedia.vercel.app/
+The deployment workflow is:
 
-Every push to the main branch can trigger a new production deployment.
+**GitHub → git push → Vercel → automatic build → production deployment**
 
-🔄 Development Workflow
+Every push to the `main` branch can trigger a new production deployment.
 
-The project uses Git for version control.
+🌐 **Production:** https://gabitomedia.vercel.app/
 
-Typical workflow:
+---
 
-git add .
-git commit -m "Update portfolio"
-git push
+## 🔄 Development Workflow
 
-After pushing changes to GitHub, Vercel handles the deployment automatically.
+The project uses Git and GitHub for version control.
 
-📂 Media Strategy
+The typical workflow is:
+
+**Edit → `git add` → `git commit` → `git push` → Vercel deployment**
+
+This allows changes to the project to be versioned and automatically deployed.
+
+---
+
+## 📂 Media Strategy
 
 Large audiovisual files are intentionally kept outside GitHub.
 
-Stored in the repository
-Source code
-Components
-Styles
-Configuration
-Optimized image thumbnails
-SVG assets
-Hosted externally
-Showreel
-Music videos
-Commercial projects
-AI video projects
-Gaming projects
+### Stored in the repository
 
-This keeps the repository small and makes deployment through GitHub and Vercel practical.
+- Source code
+- React components
+- Styles
+- Configuration
+- Optimized image thumbnails
+- SVG assets
 
-🔗 Links
+### Hosted externally
 
-Portfolio
+- Showreel
+- Music videos
+- Commercial projects
+- AI video projects
+- Gaming projects
 
-https://gabitomedia.vercel.app/
+Cloudinary is used for external video delivery, keeping the Git repository lightweight.
 
-GitHub
+---
 
-https://github.com/Gabitomedia/gabitoweb
+## 🔗 Links
 
-👤 Author
+**Portfolio:** https://gabitomedia.vercel.app/
 
-Gabito / GDT
+**GitHub:** https://github.com/Gabitomedia/gabitoweb
+
+---
+
+## 👤 Author
+
+**Gabito / GDT**
 
 Video Editor · Filmmaker · Creator
 
 Portfolio: https://gabitomedia.vercel.app/
 
-📄 License
+---
+
+## 📄 License
 
 This repository contains personal portfolio work and is intended primarily for demonstration and professional presentation.
 
