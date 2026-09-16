@@ -37,14 +37,14 @@ const services = [
     icon: PenTool,
     title: "Scriptwriting",
     description:
-      "Ideas, structure and scripts designed to turn concepts into engaging videos whit a clear sotry and purpose.",
+      "Ideas, structure and scripts designed to turn concepts into engaging videos with a clear story and purpose.",
   },
   {
     number: "05",
     icon: WandSparkles,
     title: "Motion & VFX",
     description:
-      "Motion graphics, visual effects, transitions and compositing that enchance the story without overwhelming it.",
+      "Motion graphics, visual effects, transitions and compositing that enhance the story without overwhelming it.",
   },
   {
     number: "06",

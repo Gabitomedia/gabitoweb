@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://gabitomedia.vercel.app"),
   title: "Gabito — Video Editor",
   description:
     "Video editor, filmmaker and content creator. I turn ideas into engaging visual stories.",
@@ -31,13 +32,22 @@ export const metadata: Metadata = {
   creator: "Gabito",
 
   openGraph: {
-    title: "Gabito — Video Editor",
-    description:
-      "Video editor, filmmaker and content creator. I turn ideas into engaging visual stories.",
-    type: "website",
-    locale: "en_US",
-  },
-
+  title: "Gabito — Video Editor",
+  description:
+    "Video editor, filmmaker and content creator. I turn ideas into engaging visual stories.",
+  url: "https://gabitomedia.vercel.app",
+  siteName: "Gabito — Video Editor",
+  type: "website",
+  locale: "en_US",
+  images: [
+    {
+      url: "/og-image.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Gabito — Video Editor",
+    },
+  ],
+},
   twitter: {
     card: "summary_large_image",
     title: "Gabito — Video Editor",
